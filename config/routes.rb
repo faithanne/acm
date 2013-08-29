@@ -1,4 +1,7 @@
 Acm::Application.routes.draw do
+  resources :positions
+
+
   resources :members
 
   root to: 'members#index'
