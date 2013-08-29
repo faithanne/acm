@@ -1,61 +1,16 @@
-<%= form_for(@member) do |f| %>
-  <% if @member.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@member.errors.count, "error") %> prohibited this member from being saved:</h2>
+<%= simple_form_for(@member) do |f| %>
 
-      <ul>
-      <% @member.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.input :name %>
+  <%= f.input :phone %>
+  <%= f.input :major %>
+  <%= f.input :email %>
+  <%= f.input :fees_paid %>
+  <%= f.input :campus_resident %>
+  <%= f.input :volunteer %>
+  <%= f.input :position %>
+  <%= f.input :referrer %>
+  <%= f.association :recruiter %>
+  <%= f.input :interests %>
+  <%= f.button :submit %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :major %><br />
-    <%= f.text_field :major %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :fees_paid %><br />
-    <%= f.check_box :fees_paid %>
-  </div>
-  <div class="field">
-    <%= f.label :campus_resident %><br />
-    <%= f.check_box :campus_resident %>
-  </div>
-  <div class="field">
-    <%= f.label :volunteer %><br />
-    <%= f.check_box :volunteer %>
-  </div>
-  <div class="field">
-    <%= f.label :position %><br />
-    <%= f.text_field :position %>
-  </div>
-  <div class="field">
-    <%= f.label :referrer %><br />
-    <%= f.text_field :referrer %>
-  </div>
-  <div class="field">
-    <%= f.label :recruiter_id %><br />
-    <%= f.number_field :recruiter_id %>
-  </div>
-  <div class="field">
-    <%= f.label :interests %><br />
-    <%= f.text_area :interests %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
