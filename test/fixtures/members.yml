@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  phone: MyString
+  major: MyString
+  email: MyString
+  fees_paid: false
+  campus_resident: false
+  volunteer: false
+  position: MyString
+  referrer: MyString
+  recruiter_id: 1
+  interests: MyText
+
+two:
+  name: MyString
+  phone: MyString
+  major: MyString
+  email: MyString
+  fees_paid: false
+  campus_resident: false
+  volunteer: false
+  position: MyString
+  referrer: MyString
+  recruiter_id: 1
+  interests: MyText
