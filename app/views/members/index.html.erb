@@ -1,18 +1,12 @@
-<h1>Listing members</h1>
+<h2>Listing members</h2>
 
 <table class="table table-bordered table-striped">
   <tr>
     <th>Name</th>
     <th>Phone</th>
-    <th>Major</th>
     <th>Email</th>
     <th>Fees paid</th>
-    <th>Campus resident</th>
-    <th>Volunteer</th>
     <th>Position</th>
-    <th>Referrer</th>
-    <th>Recruiter</th>
-    <th>Interests</th>
     <th></th>
     <th></th>
     <th></th>
@@ -22,15 +16,9 @@
   <tr>
     <td><%= member.name %></td>
     <td><%= member.phone %></td>
-    <td><%= member.major %></td>
     <td><%= member.email %></td>
     <td><%= member.fees_paid %></td>
-    <td><%= member.campus_resident %></td>
-    <td><%= member.volunteer %></td>
     <td><%= member.position %></td>
-    <td><%= member.referrer %></td>
-    <td><%= show_name(member. recruiter) %></td>
-    <td><%= member.interests %></td>
     <td><%= link_to 'Show', member %></td>
     <td><%= link_to 'Edit', edit_member_path(member) %></td>
     <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
