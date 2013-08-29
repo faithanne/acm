@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Acm</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>ACM Registrar</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<div class="container">
-  <%= yield %>
-</div>
-</body>
+    <div class="container">
+      <br />
+      <%= render 'layouts/nav' %>
+      <%= yield %>
+    </div>
+
+  </body>
 </html>
