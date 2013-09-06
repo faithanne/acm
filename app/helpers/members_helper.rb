@@ -23,3 +23,11 @@ def show_check(fees_paid)
     "Lame."
   end
 end
+
+def show_recruiter(recruiter)
+  if recruiter.nil?
+    "None"
+  else
+    recruiter.name
+  end
+end
