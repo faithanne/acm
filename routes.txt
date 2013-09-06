@@ -1,0 +1,15 @@
+    positions GET    /positions(.:format)          positions#index
+              POST   /positions(.:format)          positions#create
+ new_position GET    /positions/new(.:format)      positions#new
+edit_position GET    /positions/:id/edit(.:format) positions#edit
+     position GET    /positions/:id(.:format)      positions#show
+              PUT    /positions/:id(.:format)      positions#update
+              DELETE /positions/:id(.:format)      positions#destroy
+      members GET    /members(.:format)            members#index
+              POST   /members(.:format)            members#create
+   new_member GET    /members/new(.:format)        members#new
+  edit_member GET    /members/:id/edit(.:format)   members#edit
+       member GET    /members/:id(.:format)        members#show
+              PUT    /members/:id(.:format)        members#update
+              DELETE /members/:id(.:format)        members#destroy
+         root        /                             members#index

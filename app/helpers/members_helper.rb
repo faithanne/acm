@@ -15,3 +15,11 @@ module MembersHelper
     end
   end
 end
+
+def show_check(fees_paid)
+  if fees_paid == true
+    "Pizza for you!"
+  else
+    "Lame."
+  end
+end
