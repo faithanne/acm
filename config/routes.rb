@@ -1,4 +1,9 @@
 Acm::Application.routes.draw do
+  resources :shirt_sizes
+
+
+  devise_for :users
+
   resources :positions
 
 

@@ -31,3 +31,11 @@ def show_recruiter(recruiter)
     recruiter.name
   end
 end
+
+def show_size(shirt_size)
+  if shirt_size.nil?
+    "None"
+  else
+    shirt_size.size
+  end
+end
