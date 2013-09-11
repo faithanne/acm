@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+  <h2>ACM Registrar Users</h2>
+
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Edit', edit_user_registration_path %></td>
+      </tr>
+    <% end %>
+
+  </table>
+
+<% end %>

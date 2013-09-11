@@ -6,6 +6,7 @@ Acm::Application.routes.draw do
 
   resources :positions
 
+  resources :users, only: [:index]
 
   resources :members
 
