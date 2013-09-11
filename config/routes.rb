@@ -3,6 +3,7 @@ Acm::Application.routes.draw do
 
 
   devise_for :users
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :destroy_user
 
   resources :positions
 
