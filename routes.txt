@@ -1,15 +1,35 @@
-    positions GET    /positions(.:format)          positions#index
-              POST   /positions(.:format)          positions#create
- new_position GET    /positions/new(.:format)      positions#new
-edit_position GET    /positions/:id/edit(.:format) positions#edit
-     position GET    /positions/:id(.:format)      positions#show
-              PUT    /positions/:id(.:format)      positions#update
-              DELETE /positions/:id(.:format)      positions#destroy
-      members GET    /members(.:format)            members#index
-              POST   /members(.:format)            members#create
-   new_member GET    /members/new(.:format)        members#new
-  edit_member GET    /members/:id/edit(.:format)   members#edit
-       member GET    /members/:id(.:format)        members#show
-              PUT    /members/:id(.:format)        members#update
-              DELETE /members/:id(.:format)        members#destroy
-         root        /                             members#index
+             shirt_sizes GET    /shirt_sizes(.:format)          shirt_sizes#index
+                         POST   /shirt_sizes(.:format)          shirt_sizes#create
+          new_shirt_size GET    /shirt_sizes/new(.:format)      shirt_sizes#new
+         edit_shirt_size GET    /shirt_sizes/:id/edit(.:format) shirt_sizes#edit
+              shirt_size GET    /shirt_sizes/:id(.:format)      shirt_sizes#show
+                         PUT    /shirt_sizes/:id(.:format)      shirt_sizes#update
+                         DELETE /shirt_sizes/:id(.:format)      shirt_sizes#destroy
+        new_user_session GET    /users/sign_in(.:format)        devise/sessions#new
+            user_session POST   /users/sign_in(.:format)        devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)       devise/sessions#destroy
+           user_password POST   /users/password(.:format)       devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)   devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)  devise/passwords#edit
+                         PUT    /users/password(.:format)       devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)         devise/registrations#cancel
+       user_registration POST   /users(.:format)                devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)        devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)           devise/registrations#edit
+                         PUT    /users(.:format)                devise/registrations#update
+                         DELETE /users(.:format)                devise/registrations#destroy
+               positions GET    /positions(.:format)            positions#index
+                         POST   /positions(.:format)            positions#create
+            new_position GET    /positions/new(.:format)        positions#new
+           edit_position GET    /positions/:id/edit(.:format)   positions#edit
+                position GET    /positions/:id(.:format)        positions#show
+                         PUT    /positions/:id(.:format)        positions#update
+                         DELETE /positions/:id(.:format)        positions#destroy
+                 members GET    /members(.:format)              members#index
+                         POST   /members(.:format)              members#create
+              new_member GET    /members/new(.:format)          members#new
+             edit_member GET    /members/:id/edit(.:format)     members#edit
+                  member GET    /members/:id(.:format)          members#show
+                         PUT    /members/:id(.:format)          members#update
+                         DELETE /members/:id(.:format)          members#destroy
+                    root        /                               members#index

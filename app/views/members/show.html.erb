@@ -1,3 +1,12 @@
+<p>Welcome!</p>
+
+<p>If you haven't already, please see Justin McNamara or Dustin Schie to pay your dues and get your t-shirt!<br />
+ACM Chapter dues are a one-time fee of $15.</p>
+
+<p>You may email us at armstrong.acm@gmail.com or see us in SC 122.</p>
+
+<p>See you at the next meeting!</p><br />
+
 <p>
   <b>Name:</b>
   <%= @member.name %>
@@ -18,10 +27,12 @@
   <%= @member.email %>
 </p>
 
-<p>
-  <b>Fees paid:</b>
-  <%= show_check(@member.fees_paid) %>
-</p>
+<% if user_signed_in? %>
+  <p>
+    <b>Fees paid:</b>
+    <%= show_check(@member.fees_paid) %>
+  </p>
+<% end %>
 
 <p>
   <b>Shirt size:</b>
@@ -44,12 +55,7 @@
 </p>
 
 <p>
-  <b>Referrer:</b>
-  <%= @member.referrer %>
-</p>
-
-<p>
-  <b>Recruiter:</b>
+  <b>Recruited by:</b>
   <%= show_recruiter(@member.recruiter) %>
 </p>
 
@@ -57,6 +63,14 @@
   <b>Interests:</b>
   <%= @member.interests %>
 </p>
+
+<p>
+  <% if user_signed_in? %>
+    <b>Graduated?:</b>
+    <%= show_graduate(@member.graduate) %>
+  <% end %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_member_path(@member) %> |

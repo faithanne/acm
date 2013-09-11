@@ -39,3 +39,11 @@ def show_size(shirt_size)
     shirt_size.size
   end
 end
+
+def show_graduate(graduate)
+  if graduate == true
+    "Yes"
+  else
+    "No"
+  end
+end

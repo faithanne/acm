@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130910153203) do
+ActiveRecord::Schema.define(:version => 20130911181436) do
 
   create_table "members", :force => true do |t|
     t.string   "name"
@@ -21,13 +21,13 @@ ActiveRecord::Schema.define(:version => 20130910153203) do
     t.boolean  "fees_paid"
     t.boolean  "campus_resident"
     t.boolean  "volunteer"
-    t.string   "referrer"
     t.integer  "recruiter_id"
     t.text     "interests"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.integer  "position_id"
     t.integer  "shirt_size_id"
+    t.boolean  "graduate"
   end
 
   create_table "positions", :force => true do |t|
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20130910153203) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

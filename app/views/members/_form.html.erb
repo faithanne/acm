@@ -4,13 +4,17 @@
   <%= f.input :phone %>
   <%= f.input :major %>
   <%= f.input :email %>
-  <%= f.input :fees_paid %>
+
+  <% if user_signed_in? %>
+    <%= f.input :fees_paid %>
+    <%= f.input :graduate, label_method: 'Have you graduated?' %>
+  <% end %>
+
   <%= f.association :shirt_size, label_method: :size, value_method: :id %>
   <%= f.input :campus_resident %>
-  <%= f.input :volunteer %>
+  <%= f.input :volunteer, label: 'Interested in Volunteering?' %>
   <%= f.association :position %>
-  <%= f.input :referrer %>
-  <%= f.association :recruiter %>
+  <%= f.association :recruiter, label: 'Did one of these awesome people recruit you?' %>
   <%= f.input :interests %>
   <%= f.button :submit %>
 

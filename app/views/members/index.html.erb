@@ -1,31 +1,35 @@
-<h2>Members</h2>
+<% if user_signed_in? %>
+  <h2>ACM Members</h2>
 
-<table class="table table-bordered table-striped">
-  <tr>
-    <th>Name</th>
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Fees paid</th>
-    <th>Position</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Fees paid</th>
+      <th>Position</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<% @members.each do |member| %>
-  <tr>
-    <td><%= member.name %></td>
-    <td><%= member.phone %></td>
-    <td><%= member.email %></td>
-    <td><%= show_check(member.fees_paid) %></td>
-    <td><%= show_position(member.position) %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.name %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.email %></td>
+        <td><%= show_check(member.fees_paid) %></td>
+        <td><%= show_position(member.position) %></td>
+        <td><%= link_to 'Show', member %></td>
+        <td><%= link_to 'Edit', edit_member_path(member) %></td>
+        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Member', new_member_path %>
+<% else %>
+  <p>Please <%= link_to 'Sign In', new_user_session_path %>!</p>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Member', new_member_path %>
