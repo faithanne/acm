@@ -5,7 +5,7 @@
   <%= f.input :major %>
   <%= f.input :email %>
   <%= f.input :fees_paid %>
-  <%= f.association :shirt_size %>
+  <%= f.association :shirt_size, label_method: :size, value_method: :id %>
   <%= f.input :campus_resident %>
   <%= f.input :volunteer %>
   <%= f.association :position %>
