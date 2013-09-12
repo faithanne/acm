@@ -14,6 +14,5 @@
 /log/*.log
 /tmp
 
-# Ignore these files because they contain the email password
+# Ignore this file because it contains the email password
 /config/environments/development.rb
-/config/environments/production.rb

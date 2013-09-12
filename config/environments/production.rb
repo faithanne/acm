@@ -57,11 +57,9 @@ Acm::Application.configure do
   port:                 587,
   domain:               'gmail.com',
   user_name:            'armstrong.acm@gmail.com',
-  password:             '<password>',
   authentication:       'plain',
   enable_starttls_auto: true
   }
-
 
   # Enable threaded mode
   # config.threadsafe!
