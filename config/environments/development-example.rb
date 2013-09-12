@@ -22,9 +22,9 @@ Acm::Application.configure do
   port:                 587,
   domain:               'gmail.com',
   user_name:            'armstrong.acm@gmail.com',
-  password:             'thecpuisthebottleneck',
+  password:             '<password>',
   authentication:       'plain',
-  enable_starttls_auto: true  }
+  enable_starttls_auto: true
   }
 
   # Print deprecation notices to the Rails logger
