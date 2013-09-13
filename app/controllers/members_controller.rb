@@ -44,8 +44,8 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.save
-        MemberMailer.welcome_email(@member).deliver
-        MemberMailer.new_member_notification(@member).deliver
+        MemberMailer.delay.welcome_email(@member)
+        MemberMailer.delay.new_member_notification(@member)
         format.html { redirect_to @member, notice: 'Member was successfully created.' }
         format.json { render json: @member, status: :created, location: @member }
       else
