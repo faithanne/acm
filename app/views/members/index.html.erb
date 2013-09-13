@@ -1,4 +1,5 @@
 <% if user_signed_in? %>
+
   <h2>ACM Members</h2>
 
   <table class="table table-bordered table-striped">
@@ -30,6 +31,9 @@
   <br />
 
   <%= link_to 'New Member', new_member_path %>
+
 <% else %>
+
   <p>Please <%= link_to 'Sign In', new_user_session_path %>!</p>
+
 <% end %>

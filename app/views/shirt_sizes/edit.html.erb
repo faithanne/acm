@@ -1,6 +1,13 @@
-<h1>Editing shirt_size</h1>
+<% if user_signed_in? %>
+  <h2>Editing shirt_size</h2>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @shirt_size %> |
-<%= link_to 'Back', shirt_sizes_path %>
+  <%= link_to 'Show', @shirt_size %> |
+  <%= link_to 'Back', shirt_sizes_path %>
+
+<% else %>
+
+  <p>Please <%= link_to 'Sign In', new_user_session_path %>!</p>
+
+<% end %>

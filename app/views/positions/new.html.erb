@@ -1,5 +1,13 @@
-<h1>New position</h1>
+<% if user_signed_in? %>
 
-<%= render 'form' %>
+  <h2>New position</h2>
 
-<%= link_to 'Back', positions_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Back', positions_path %>
+
+<% else %>
+
+  <p>Please <%= link_to 'Sign In', new_user_session_path %>!</p>
+
+<% end %>

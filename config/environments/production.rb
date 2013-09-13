@@ -56,7 +56,8 @@ Acm::Application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'gmail.com',
-  user_name:            'armstrong.acm@gmail.com',
+  user_name:            'faith.anne@gmail.com',
+  password:             ENV['GMAIL_PASSWORD'],
   authentication:       'plain',
   enable_starttls_auto: true
   }

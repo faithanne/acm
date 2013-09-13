@@ -1,6 +1,14 @@
-<h2>Edit Member Info</h2>
+<% if user_signed_in? %>
 
-<%= render 'form' %>
+  <h2>Edit Member Info</h2>
 
-<%= link_to 'Show', @member %> |
-<%= link_to 'Back', members_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Show', @member %> |
+  <%= link_to 'Back', members_path %>
+
+<% else %>
+
+  <p>Please <%= link_to 'Sign In', new_user_session_path %>!</p>
+
+<% end %>
