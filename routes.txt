@@ -18,6 +18,7 @@ cancel_user_registration GET    /users/cancel(.:format)         devise/registrat
   edit_user_registration GET    /users/edit(.:format)           devise/registrations#edit
                          PUT    /users(.:format)                devise/registrations#update
                          DELETE /users(.:format)                devise/registrations#destroy
+            destroy_user DELETE /users/:id(.:format)            users#destroy
                positions GET    /positions(.:format)            positions#index
                          POST   /positions(.:format)            positions#create
             new_position GET    /positions/new(.:format)        positions#new
@@ -25,6 +26,7 @@ cancel_user_registration GET    /users/cancel(.:format)         devise/registrat
                 position GET    /positions/:id(.:format)        positions#show
                          PUT    /positions/:id(.:format)        positions#update
                          DELETE /positions/:id(.:format)        positions#destroy
+                   users GET    /users(.:format)                users#index
                  members GET    /members(.:format)              members#index
                          POST   /members(.:format)              members#create
               new_member GET    /members/new(.:format)          members#new
@@ -32,4 +34,4 @@ cancel_user_registration GET    /users/cancel(.:format)         devise/registrat
                   member GET    /members/:id(.:format)          members#show
                          PUT    /members/:id(.:format)          members#update
                          DELETE /members/:id(.:format)          members#destroy
-                    root        /                               members#index
+                    root        /                               members#new
